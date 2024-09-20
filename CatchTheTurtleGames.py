@@ -16,7 +16,15 @@ game_time_instance.penup()
 game_time_instance.hideturtle()
 game_time_instance.left(90)
 game_time_instance.forward(300)
-game_time_instance.write(f" {game_time}")
+game_time_instance.write(f" Time: {game_time}")
+game_score = 0
+game_score_instance = turtle.Turtle()
+game_score_instance.penup()
+game_score_instance.hideturtle()
+game_score_instance.left(90)
+game_score_instance.forward(290)
+game_score_instance.write(f" Score: {game_score}")
+
 
 while game_time > 0:
     my_turtle_instance.hideturtle()
@@ -27,7 +35,11 @@ while game_time > 0:
     time.sleep(2)
     game_time = game_time - 2
     game_time_instance.clear()
-    game_time_instance.write(f" {game_time}")
+    game_time_instance.write(f" Time: {game_time}")
+    game_score_instance.clear()
+    game_score_instance.write(f"Score: {game_score}")
+
+
 
 
 
